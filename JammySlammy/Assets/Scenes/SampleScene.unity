@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  jumpForce: 10
+  jumpForce: 3
 --- !u!1 &426982719
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,8 +903,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b471813100662e34da4eadb16cec6a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpForce: 10
+  speed: 5
+  jumpForce: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
