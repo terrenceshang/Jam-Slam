@@ -1,4 +1,4 @@
-    using UnityEngine;
+using UnityEngine;
 
 public class WaterScript : MonoBehaviour
 {
@@ -6,14 +6,9 @@ public class WaterScript : MonoBehaviour
     {
         if (other.CompareTag("Player")) // Assuming the berries have a tag named "Player"
         {
-            MovementS berryMovement = other.GetComponent<MovementS>();
-            if (berryMovement != null)
-            {
-                berryMovement.isInWater = true;
-                SpriteRenderer berrySprite = other.GetComponent<SpriteRenderer>();
-                Color berryColor = berrySprite.color;
-                berrySprite.color = new Color(berryColor.r, berryColor.g, berryColor.b, 0.5f); // 50% opacity
-            }
+            Debug.Log(other.name + " has entered the water."); // Print name of the object that entered
+
+            HandleWaterInteraction(other, true);
         }
     }
 
@@ -21,14 +16,32 @@ public class WaterScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            MovementS berryMovement = other.GetComponent<MovementS>();
-            if (berryMovement != null)
-            {
-                berryMovement.isInWater = false;
-                SpriteRenderer berrySprite = other.GetComponent<SpriteRenderer>();
-                Color berryColor = berrySprite.color;
-                berrySprite.color = new Color(berryColor.r, berryColor.g, berryColor.b, 1f); // back to full opacity
-            }
+            Debug.Log(other.name + " has left the water."); // Print name of the object that left
+
+            HandleWaterInteraction(other, false);
+        }
+    }
+
+    private void HandleWaterInteraction(Collider2D berry, bool isInWater)
+    {
+        MovementS strawberryMovement = berry.GetComponent<MovementS>();
+        MovementBB blueberryMovement = berry.GetComponent<MovementBB>();
+
+        if (strawberryMovement != null)
+        {
+            strawberryMovement.isInWater = isInWater;
+        }
+
+        if (blueberryMovement != null)
+        {
+            blueberryMovement.isInWater = isInWater;
+        }
+
+        SpriteRenderer berrySprite = berry.GetComponent<SpriteRenderer>();
+        if (berrySprite != null)
+        {
+            Color berryColor = berrySprite.color;
+            berrySprite.color = new Color(berryColor.r, berryColor.g, berryColor.b, isInWater ? 0.5f : 1f);
         }
     }
 }
