@@ -1,59 +1,84 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-
-
-
 
 public class MovementBB : MonoBehaviour
 {
-    public float speed = 3f; // Speed of the player movement
-    public float jumpForce = 10f; // Force of the jump
-    private Rigidbody2D rb;  // Reference to the Rigidbody2D component
-    private bool isGrounded = false; // To check if the player is on the ground
+    private float horizontal;
+    public float speed = 8f;
+    public float jumpingPower = 8f;
+    private bool isFacingRight = true;
+    public float waterSpeedModifier = 0.75f;
+    public bool isInWater = false; 
+    public float waterJumpModifier = 0.75f;
 
-    private void Awake()
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float stepHeight = 0.2f;
+
+    void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
+        horizontal = 0f;
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            horizontal = -1f;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            horizontal = 1f;
+        }
+
+        float currentSpeed = isInWater ? speed * waterSpeedModifier : speed;
+        rb.velocity = new Vector2(horizontal * currentSpeed, rb.velocity.y);
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
+        {
+            float actualJumpForce = isInWater ? jumpingPower * waterJumpModifier : jumpingPower;
+            rb.velocity = new Vector2(rb.velocity.x, actualJumpForce);
+        }
+
+        HandleStepUp();
+        Flip();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        // Movement
-        float move = 0f;
-        if (Input.GetKey(KeyCode.A))
-        {
-            move = -1f; // Move left
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            move = 1f; // Move right
-        }
-        rb.velocity = new Vector2(move * speed, rb.velocity.y);
+        float currentSpeed = isInWater ? speed * waterSpeedModifier : speed;
+        rb.velocity = new Vector2(horizontal * currentSpeed, rb.velocity.y);
+    }
 
-        // Jumping
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+    private bool IsGrounded()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
+        foreach(var collider in colliders)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            if (collider.CompareTag("Ground") || (collider.CompareTag("Player") && collider.gameObject != this.gameObject))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void HandleStepUp()
+    {
+        float direction = isFacingRight ? 1f : -1f;
+        Vector2 rayOrigin = (Vector2)transform.position + new Vector2(direction * 0.5f, 0); 
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, stepHeight + 0.5f, groundLayer); 
+
+        if (hit && Mathf.Abs(hit.point.y - groundCheck.position.y) <= stepHeight)
+        {
+            transform.position = new Vector3(transform.position.x, hit.point.y + stepHeight, transform.position.z);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Flip()
     {
-        // Check if the player is on the ground
-        if (collision.gameObject.tag == "Ground")
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
-            isGrounded = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        // Check if the player has left the ground
-        if (collision.gameObject.tag == "Ground")
-        {
-            isGrounded = false;
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
     }
 }
