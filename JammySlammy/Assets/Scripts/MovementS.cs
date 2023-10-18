@@ -9,22 +9,41 @@ public class MovementS : MonoBehaviour
     public float waterSpeedModifier = 0.75f;
     public bool isInWater = false; 
     public float waterJumpModifier = 0.75f;
+    public BoxCollider2D objectBounds;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float stepHeight = 0.2f;
+    private Camera c;
+    private float halfHeight;
+    private float halfWidth;
+    private float halfSize;
+
+    void Start()
+    {
+        c = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        halfHeight = c.orthographicSize;
+        halfWidth = c.aspect * halfHeight;
+        halfSize = (objectBounds.bounds.max.x - objectBounds.bounds.min.x) / 2.0f;
+    }
 
     void Update()
     {
         horizontal = 0f;
         if (Input.GetKey(KeyCode.A))
         {
-            horizontal = -1f;
+            if (transform.position.x > c.transform.position.x - halfWidth + halfSize)
+            {
+                horizontal = -1f;
+            }
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            horizontal = 1f;
+            if (transform.position.x < c.transform.position.x + halfWidth - halfSize)
+            {
+                horizontal = 1f;
+            }
         }
 
         float currentSpeed = isInWater ? speed * waterSpeedModifier : speed;
