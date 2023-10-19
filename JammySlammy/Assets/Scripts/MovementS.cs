@@ -7,9 +7,16 @@ public class MovementS : MonoBehaviour
     public float jumpingPower = 6f;
     private bool isFacingRight = true;
     public float waterSpeedModifier = 0.75f;
-    public bool isInWater = false; 
+    public bool isInWater = false;
     public float waterJumpModifier = 0.75f;
     public BoxCollider2D objectBounds;
+
+    public GameObject superCubePrefab;
+
+    public bool hasSpecialCube = false;
+
+    public float normalPushForce = 1f; // When no special cube
+    public float boostedPushForce = 1000f; // When it has the special cube
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -57,6 +64,10 @@ public class MovementS : MonoBehaviour
 
         HandleStepUp();
         Flip();
+        if (Input.GetKeyDown(KeyCode.S) && !IsGrounded() && hasSpecialCube)
+        {
+            DropSpecialCube();
+        }
     }
 
     private void FixedUpdate()
@@ -68,7 +79,7 @@ public class MovementS : MonoBehaviour
     private bool IsGrounded()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
-        foreach(var collider in colliders)
+        foreach (var collider in colliders)
         {
             if (collider.CompareTag("Ground") || (collider.CompareTag("Player") && collider.gameObject != this.gameObject))
             {
@@ -81,8 +92,8 @@ public class MovementS : MonoBehaviour
     private void HandleStepUp()
     {
         float direction = isFacingRight ? 1f : -1f;
-        Vector2 rayOrigin = (Vector2)transform.position + new Vector2(direction * 0.5f, 0); 
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, stepHeight + 0.5f, groundLayer); 
+        Vector2 rayOrigin = (Vector2)transform.position + new Vector2(direction * 0.5f, 0);
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, stepHeight + 0.5f, groundLayer);
 
         if (hit && Mathf.Abs(hit.point.y - groundCheck.position.y) <= stepHeight)
         {
@@ -98,6 +109,51 @@ public class MovementS : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+
+    private void DropSpecialCube()
+    {
+        // Position right underneath the character
+        Vector2 dropPosition = new Vector2(transform.position.x, transform.position.y - 0.5f);
+
+        GameObject sugarCubeInstance = Instantiate(superCubePrefab, dropPosition, Quaternion.identity);
+
+        // Modify the gravity scale for faster drop
+        Rigidbody2D cubeRb = sugarCubeInstance.GetComponent<Rigidbody2D>();
+        cubeRb.gravityScale = 5f;  // Adjust the value as per your requirement
+
+        // Start the pickup cooldown on the dropped cube
+        sugarCubeInstance.GetComponent<SuperCube>().StartPickupCooldown();
+
+        hasSpecialCube = false; // Set this to false after dropping the cube.
+    }
+
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        Debug.Log("This is called");
+
+        if (other.CompareTag("Pushable"))
+        {
+            Debug.Log("It's a Pushable object!");
+
+            float currentPushForce = hasSpecialCube ? boostedPushForce : normalPushForce;
+            Pushable pushableBlock = other.GetComponent<Pushable>();
+
+            if (pushableBlock != null)
+            {
+                if (Input.GetKey(KeyCode.D))
+                {
+                    Debug.Log("D key is pressed!");
+                    pushableBlock.Push(Vector2.right * currentPushForce);
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    Debug.Log("A key is pressed!");
+                    pushableBlock.Push(Vector2.left * currentPushForce);
+                }
+                // If you also want to push up and down using W and S, add similar logic here...
+            }
         }
     }
 }

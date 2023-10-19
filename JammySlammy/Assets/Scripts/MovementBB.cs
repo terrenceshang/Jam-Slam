@@ -7,9 +7,13 @@ public class MovementBB : MonoBehaviour
     public float jumpingPower = 8f;
     private bool isFacingRight = true;
     public float waterSpeedModifier = 0.75f;
-    public bool isInWater = false; 
+    public bool isInWater = false;
     public float waterJumpModifier = 0.75f;
     public BoxCollider2D objectBounds;
+
+    public GameObject superCubePrefab;
+
+    public bool hasSpecialCube = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -57,6 +61,11 @@ public class MovementBB : MonoBehaviour
 
         HandleStepUp();
         Flip();
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !IsGrounded() && hasSpecialCube)
+        {
+            DropSpecialCube();
+        }
     }
 
     private void FixedUpdate()
@@ -68,7 +77,7 @@ public class MovementBB : MonoBehaviour
     private bool IsGrounded()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
-        foreach(var collider in colliders)
+        foreach (var collider in colliders)
         {
             if (collider.CompareTag("Ground") || (collider.CompareTag("Player") && collider.gameObject != this.gameObject))
             {
@@ -81,8 +90,8 @@ public class MovementBB : MonoBehaviour
     private void HandleStepUp()
     {
         float direction = isFacingRight ? 1f : -1f;
-        Vector2 rayOrigin = (Vector2)transform.position + new Vector2(direction * 0.5f, 0); 
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, stepHeight + 0.5f, groundLayer); 
+        Vector2 rayOrigin = (Vector2)transform.position + new Vector2(direction * 0.5f, 0);
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, stepHeight + 0.5f, groundLayer);
 
         if (hit && Mathf.Abs(hit.point.y - groundCheck.position.y) <= stepHeight)
         {
@@ -99,5 +108,22 @@ public class MovementBB : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    private void DropSpecialCube()
+    {
+        // Position right underneath the character
+        Vector2 dropPosition = new Vector2(transform.position.x, transform.position.y - 0.5f);
+
+        GameObject sugarCubeInstance = Instantiate(superCubePrefab, dropPosition, Quaternion.identity);
+
+        // Modify the gravity scale for faster drop
+        Rigidbody2D cubeRb = sugarCubeInstance.GetComponent<Rigidbody2D>();
+        cubeRb.gravityScale = 5f;  // Adjust the value as per your requirement
+
+        // Start the pickup cooldown on the dropped cube
+        sugarCubeInstance.GetComponent<SuperCube>().StartPickupCooldown();
+
+        hasSpecialCube = false; // Set this to false after dropping the cube.
     }
 }
