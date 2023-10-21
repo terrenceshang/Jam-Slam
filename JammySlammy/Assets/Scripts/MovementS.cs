@@ -27,12 +27,18 @@ public class MovementS : MonoBehaviour
     private float halfWidth;
     private float halfSize;
 
+    private Vector3 respawnPoint;
+
+
+
     void Start()
     {
         c = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         halfHeight = c.orthographicSize;
         halfWidth = c.aspect * halfHeight;
         halfSize = (objectBounds.bounds.max.x - objectBounds.bounds.min.x) / 2.0f;
+        respawnPoint = transform.position;
+
     }
 
     void Update()
@@ -81,7 +87,7 @@ public class MovementS : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
         foreach (var collider in colliders)
         {
-            if (collider.CompareTag("Ground") || collider.CompareTag("Pushable") || (collider.CompareTag("Player") && collider.gameObject != this.gameObject))
+            if ((collider.CompareTag("Ground") || collider.CompareTag("Pushable") || (collider.CompareTag("Player")) && collider.gameObject != this.gameObject))
             {
                 return true;
             }
