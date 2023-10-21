@@ -81,7 +81,7 @@ public class MovementS : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
         foreach (var collider in colliders)
         {
-            if (collider.CompareTag("Ground") || (collider.CompareTag("Player") && collider.gameObject != this.gameObject))
+            if (collider.CompareTag("Ground") || collider.CompareTag("Pushable") || (collider.CompareTag("Player") && collider.gameObject != this.gameObject))
             {
                 return true;
             }
@@ -131,7 +131,7 @@ public class MovementS : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("This is called");
+
 
         if (other.CompareTag("Pushable"))
         {
@@ -152,7 +152,7 @@ public class MovementS : MonoBehaviour
                     Debug.Log("A key is pressed!");
                     pushableBlock.Push(Vector2.left * currentPushForce);
                 }
-                // If you also want to push up and down using W and S, add similar logic here...
+
             }
         }
     }

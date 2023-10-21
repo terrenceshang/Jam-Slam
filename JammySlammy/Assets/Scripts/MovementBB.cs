@@ -9,6 +9,10 @@ public class MovementBB : MonoBehaviour
     public float waterSpeedModifier = 0.75f;
     public bool isInWater = false;
     public float waterJumpModifier = 0.75f;
+
+    public float superCubeModifier = 1.25f;
+
+
     public BoxCollider2D objectBounds;
 
     public GameObject superCubePrefab;
@@ -34,9 +38,12 @@ public class MovementBB : MonoBehaviour
 
     void Update()
     {
+
         horizontal = 0f;
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+            float actualSpeed = hasSpecialCube ? speed * superCubeModifier : speed;
+
             if (transform.position.x > c.transform.position.x - halfWidth + halfSize)
             {
                 horizontal = -1f;
@@ -44,6 +51,8 @@ public class MovementBB : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
+            float actualSpeed = hasSpecialCube ? speed * superCubeModifier : speed;
+
             if (transform.position.x < c.transform.position.x + halfWidth - halfSize)
             {
                 horizontal = 1f;
@@ -53,17 +62,26 @@ public class MovementBB : MonoBehaviour
         float currentSpeed = isInWater ? speed * waterSpeedModifier : speed;
         rb.velocity = new Vector2(horizontal * currentSpeed, rb.velocity.y);
 
+
+
         if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
         {
             float actualJumpForce = isInWater ? jumpingPower * waterJumpModifier : jumpingPower;
+
+            // Apply SuperCube modifier if hasSpecialCube is true
+            actualJumpForce = hasSpecialCube ? actualJumpForce * superCubeModifier : actualJumpForce;
+
             rb.velocity = new Vector2(rb.velocity.x, actualJumpForce);
         }
+
 
         HandleStepUp();
         Flip();
 
         if (Input.GetKeyDown(KeyCode.DownArrow) && !IsGrounded() && hasSpecialCube)
         {
+            Debug.Log("Checking the statement");
+
             DropSpecialCube();
         }
     }
@@ -79,7 +97,7 @@ public class MovementBB : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
         foreach (var collider in colliders)
         {
-            if (collider.CompareTag("Ground") || (collider.CompareTag("Player") && collider.gameObject != this.gameObject))
+            if ((collider.CompareTag("Ground") || collider.CompareTag("Pushable") || (collider.CompareTag("Player")) && collider.gameObject != this.gameObject))
             {
                 return true;
             }
@@ -112,6 +130,8 @@ public class MovementBB : MonoBehaviour
 
     private void DropSpecialCube()
     {
+
+        Debug.Log("Trying the dropmethod");
         // Position right underneath the character
         Vector2 dropPosition = new Vector2(transform.position.x, transform.position.y - 0.5f);
 
