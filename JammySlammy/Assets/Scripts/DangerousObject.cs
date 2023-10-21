@@ -21,12 +21,7 @@ public class DangerousObject : MonoBehaviour
         Debug.Log(other.name + " has encountered the dangerous object but is not affected.");
     }
 
-    private void Die(GameObject obj)
-    {
-        obj.GetComponent<Collider2D>().enabled = false; // Disable collider to prevent further interactions
-        obj.GetComponent<Rigidbody2D>().isKinematic = true; // Set Rigidbody2D to kinematic to control movement
-        StartCoroutine(DeathAnimation(obj));
-    }
+
 
     private System.Collections.IEnumerator DeathAnimation(GameObject obj)
     {
@@ -52,6 +47,92 @@ public class DangerousObject : MonoBehaviour
             yield return null;
         }
 
-        Destroy(obj); // Destroy the object
+        RespawnAllVulnerableObjects();
     }
+
+
+    private void Die(GameObject obj)
+    {
+        obj.GetComponent<Collider2D>().enabled = false; // Disable collider to prevent further interactions
+        obj.GetComponent<Rigidbody2D>().isKinematic = true; // Set Rigidbody2D to kinematic to control movement
+        StartCoroutine(DeathAnimation(obj));
+    }
+
+    private void RespawnIndividualObject(GameObject obj)
+    {
+        Vector3 respawnPoint = Vector3.zero;
+
+        MovementS strawberry = obj.GetComponent<MovementS>();
+        MovementBB blueberry = obj.GetComponent<MovementBB>();
+
+
+
+        if (strawberry != null)
+        {
+            strawberry.ResetPlayerState();
+        }
+
+        if (blueberry != null)
+        {
+            blueberry.ResetPlayerState();
+        }
+
+        // Determine which object has died and get its respawn point
+        if (strawberry != null)
+        {
+            respawnPoint = strawberry.respawnPoint;
+        }
+        else if (blueberry != null)
+        {
+            respawnPoint = blueberry.respawnPoint;
+        }
+
+
+
+        if (respawnPoint != Vector3.zero) // Check that we have a valid respawn point
+        {
+            GameObject strawberryObj = FindObjectOfType<MovementS>().gameObject;
+            GameObject blueberryObj = FindObjectOfType<MovementBB>().gameObject;
+
+            // Respawn the strawberry
+            if (strawberryObj)
+            {
+                strawberryObj.transform.position = respawnPoint;
+                strawberryObj.GetComponent<Collider2D>().enabled = true;
+                strawberryObj.GetComponent<Rigidbody2D>().isKinematic = false;
+                CameraMovement camScript = FindObjectOfType<CameraMovement>();
+                if (camScript)
+                {
+                    camScript.RegisterPlayer1(strawberryObj.transform);
+                }
+            }
+
+            // Respawn the blueberry
+            if (blueberryObj)
+            {
+                blueberryObj.transform.position = respawnPoint;
+                blueberryObj.GetComponent<Collider2D>().enabled = true;
+                blueberryObj.GetComponent<Rigidbody2D>().isKinematic = false;
+                CameraMovement camScript = FindObjectOfType<CameraMovement>();
+                if (camScript)
+                {
+                    camScript.RegisterPlayer2(blueberryObj.transform);
+                }
+            }
+        }
+        else
+        {
+            Debug.LogWarning(obj.name + " doesn't have a valid respawn point.");
+        }
+    }
+
+
+    private void RespawnAllVulnerableObjects()
+    {
+        foreach (GameObject vulnerableObj in vulnerableObjects)
+        {
+            RespawnIndividualObject(vulnerableObj);
+        }
+    }
+
 }

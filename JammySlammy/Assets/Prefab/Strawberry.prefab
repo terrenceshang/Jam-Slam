@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6be568732fe7f674ea0e10e8a66dd35d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -106,6 +106,11 @@ MonoBehaviour:
   waterSpeedModifier: 0.1
   isInWater: 0
   waterJumpModifier: 0.8
+  objectBounds: {fileID: 8910737254336678523}
+  superCubePrefab: {fileID: 3769417434459164868, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  hasSpecialCube: 0
+  normalPushForce: 1
+  boostedPushForce: 1000
   rb: {fileID: 8206537723629180837}
   groundCheck: {fileID: 2267654611388453677}
   groundLayer:

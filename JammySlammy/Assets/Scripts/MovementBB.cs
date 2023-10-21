@@ -28,12 +28,15 @@ public class MovementBB : MonoBehaviour
     private float halfWidth;
     private float halfSize;
 
+    public Vector3 respawnPoint;
+
     void Start()
     {
         c = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         halfHeight = c.orthographicSize;
         halfWidth = c.aspect * halfHeight;
         halfSize = (objectBounds.bounds.max.x - objectBounds.bounds.min.x) / 2.0f;
+        respawnPoint = transform.position;
     }
 
     void Update()
@@ -145,5 +148,16 @@ public class MovementBB : MonoBehaviour
         sugarCubeInstance.GetComponent<SuperCube>().StartPickupCooldown();
 
         hasSpecialCube = false; // Set this to false after dropping the cube.
+    }
+
+    public void ResetPlayerState()
+    {
+        isInWater = false;
+        // Reset other states or effects as needed
+        SpriteRenderer berrySprite = GetComponent<SpriteRenderer>();
+        if (berrySprite != null)
+        {
+            berrySprite.color = new Color(1f, 1f, 1f, 1f); // Reset the sprite's alpha to fully opaque
+        }
     }
 }

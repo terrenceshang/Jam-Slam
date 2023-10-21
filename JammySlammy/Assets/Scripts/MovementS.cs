@@ -27,7 +27,7 @@ public class MovementS : MonoBehaviour
     private float halfWidth;
     private float halfSize;
 
-    private Vector3 respawnPoint;
+    public Vector3 respawnPoint;
 
 
 
@@ -141,7 +141,6 @@ public class MovementS : MonoBehaviour
 
         if (other.CompareTag("Pushable"))
         {
-            Debug.Log("It's a Pushable object!");
 
             float currentPushForce = hasSpecialCube ? boostedPushForce : normalPushForce;
             Pushable pushableBlock = other.GetComponent<Pushable>();
@@ -150,16 +149,27 @@ public class MovementS : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.D))
                 {
-                    Debug.Log("D key is pressed!");
+
                     pushableBlock.Push(Vector2.right * currentPushForce);
                 }
                 else if (Input.GetKey(KeyCode.A))
                 {
-                    Debug.Log("A key is pressed!");
+
                     pushableBlock.Push(Vector2.left * currentPushForce);
                 }
 
             }
+        }
+    }
+
+    public void ResetPlayerState()
+    {
+        isInWater = false;
+        // Reset other states or effects as needed
+        SpriteRenderer berrySprite = GetComponent<SpriteRenderer>();
+        if (berrySprite != null)
+        {
+            berrySprite.color = new Color(1f, 1f, 1f, 1f); // Reset the sprite's alpha to fully opaque
         }
     }
 }

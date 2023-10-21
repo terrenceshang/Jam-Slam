@@ -137,12 +137,17 @@ MonoBehaviour:
   waterSpeedModifier: 0.5
   isInWater: 0
   waterJumpModifier: 0.75
+  superCubeModifier: 1.25
+  objectBounds: {fileID: 1725353804583369864}
+  superCubePrefab: {fileID: 3769417434459164868, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  hasSpecialCube: 0
   rb: {fileID: 126724453056514881}
   groundCheck: {fileID: 6204834162929393311}
   groundLayer:
     serializedVersion: 2
     m_Bits: 192
   stepHeight: 0
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!61 &1725353804583369864
 BoxCollider2D:
   m_ObjectHideFlags: 0
