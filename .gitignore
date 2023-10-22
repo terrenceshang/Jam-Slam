@@ -17,6 +17,7 @@
 /JammySlammy/[Bb]uilds/
 /JammySlammy/[Ll]ogs/
 /JammySlammy/[Uu]ser[Ss]ettings/
+/JammySlammy/Assets/Download/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -35,6 +36,7 @@
 
 # Visual Studio cache directory
 .vs/
+*.meta
 
 # Gradle cache directory
 .gradle/
