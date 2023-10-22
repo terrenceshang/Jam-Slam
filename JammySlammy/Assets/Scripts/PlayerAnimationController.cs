@@ -57,8 +57,7 @@ public class PlayerAnimationController : MonoBehaviour
             if (horizontalChange > 0.0001) {
                 spriteRenderer.sprite = jumpRightSprites[currentFrameIndex % jumpRightSprites.Count];
             }
-            else 
-            {
+            if (horizontalChange < -0.0001) {
                 spriteRenderer.sprite= jumpLeftSprites[currentFrameIndex % jumpLeftSprites.Count];
             }
             Debug.Log("Playing Jump Animation");

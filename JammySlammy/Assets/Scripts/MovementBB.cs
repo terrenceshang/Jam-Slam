@@ -79,7 +79,7 @@ public class MovementBB : MonoBehaviour
 
 
         HandleStepUp();
-        Flip();
+
 
         if (Input.GetKeyDown(KeyCode.DownArrow) && !IsGrounded() && hasSpecialCube)
         {
