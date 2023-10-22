@@ -156,3 +156,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446a06fd8690c6049967eee9aee4ce8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sugarCubePrefab: {fileID: 4396537750130036752}

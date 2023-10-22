@@ -6,7 +6,7 @@ public class WaterScript : MonoBehaviour
     {
         if (other.CompareTag("Player")) // Assuming the berries have a tag named "Player"
         {
-            Debug.Log(other.name + " has entered the water."); // Print name of the object that entered
+
 
             HandleWaterInteraction(other, true);
         }
@@ -16,7 +16,7 @@ public class WaterScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log(other.name + " has left the water."); // Print name of the object that left
+
 
             HandleWaterInteraction(other, false);
         }

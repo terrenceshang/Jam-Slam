@@ -14,16 +14,21 @@ public class SugarCube : MonoBehaviour
         cubeManager = FindObjectOfType<SugarCubeManager>();
     }
 
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            SugarCubeManager manager = FindObjectOfType<SugarCubeManager>();
+            if (manager != null)
+            {
+                manager.RegisterPickedUpCube(this, transform.position);
+            }
+
             other.GetComponent<Player>().CollectSugarCube();
-
-            // Inform the CubeManager about the collected cube
-            cubeManager.RegisterPickedUpCube(this, originalPosition);
-
             Destroy(gameObject); // Destroy the sugar cube after collection
         }
     }
+
 }

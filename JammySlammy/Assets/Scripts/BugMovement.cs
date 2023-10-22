@@ -20,7 +20,7 @@ public class BugMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("Triggered by: " + collider.gameObject.name);
+
         if (collider.gameObject.CompareTag("TurnPoint"))
         {
             // Change direction

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    private float x;
+
     [SerializeField] private Transform player1;
     [SerializeField] private Transform player2;
-    [SerializeField] private float boundaryBoxWidth = 5.0f;
-    [SerializeField] private float smoothSpeed = 0.125f;  // Adjust the smoothing speed
 
-    private void FixedUpdate()
+    private void Update()
     {
-<<<<<<< Updated upstream
         if (player1 == null || player2 == null)
         {
             return; // Exit if any player has been destroyed or is not assigned yet
@@ -19,21 +18,8 @@ public class CameraMovement : MonoBehaviour
 
         x = (player1.position.x + player2.position.x) / 2.0f;
         if (x > 7.02)
-=======
-        float cameraCenterX = transform.position.x;
-        float leftBoundary = cameraCenterX - boundaryBoxWidth / 2;
-        float rightBoundary = cameraCenterX + boundaryBoxWidth / 2;
-
-        bool player1OutOfBox = player1.position.x < leftBoundary || player1.position.x > rightBoundary;
-        bool player2OutOfBox = player2.position.x < leftBoundary || player2.position.x > rightBoundary;
-        bool playersOnSameSide = (player1.position.x - cameraCenterX) * (player2.position.x - cameraCenterX) > 0;
-
-        if ((player1OutOfBox || player2OutOfBox) && playersOnSameSide)
->>>>>>> Stashed changes
         {
-            float averageX = (player1.position.x + player2.position.x) / 2;
-            Vector3 targetPosition = new Vector3(averageX, transform.position.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, targetPosition, smoothSpeed);
+            transform.position = new Vector3(x, transform.position.y, transform.position.z);
         }
     }
 

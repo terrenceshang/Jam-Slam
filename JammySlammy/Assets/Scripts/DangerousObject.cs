@@ -14,7 +14,7 @@ public class DangerousObject : MonoBehaviour
         {
             if (other.gameObject == vulnerableObj)
             {
-                Debug.Log(vulnerableObj.name + " has encountered the dangerous object and will die.");
+
                 Die(other.gameObject);
                 return; // Exit the loop once a match is found
             }
@@ -47,8 +47,10 @@ public class DangerousObject : MonoBehaviour
             obj.transform.position = Vector3.Lerp(initialPos, targetPos, t);
             yield return null;
         }
-        cubeManager.RespawnCubes();
+
         RespawnAllVulnerableObjects();
+        cubeManager.RespawnCubes();
+        Debug.Log("Nå skal respawn være sendt");
     }
 
 

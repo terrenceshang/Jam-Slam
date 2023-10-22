@@ -831,6 +831,10 @@ PrefabInstance:
       value: Water - Red-1 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 1563099956}
@@ -1196,6 +1200,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &196535368
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1357,6 +1362,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &196951707
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1600,6 +1606,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 0}
 --- !u!212 &213402826
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2331,6 +2338,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 1
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &271175267
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3068,6 +3076,10 @@ PrefabInstance:
       value: Water - Red-1 (20)
       objectReference: {fileID: 0}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 1563099956}
@@ -3304,6 +3316,10 @@ PrefabInstance:
       value: Water - Red-1 (14)
       objectReference: {fileID: 0}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 1563099956}
@@ -3324,6 +3340,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+--- !u!114 &400914039 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5868411406661313029, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+  m_PrefabInstance: {fileID: 8650947917330516387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446a06fd8690c6049967eee9aee4ce8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &402035326
 GameObject:
   m_ObjectHideFlags: 0
@@ -6833,6 +6860,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 0}
 --- !u!212 &688865163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7039,6 +7067,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &707187630
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7798,6 +7827,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 0}
 --- !u!114 &809109883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8168,6 +8198,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &826703602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10676,6 +10707,10 @@ PrefabInstance:
       value: Water - Red-1 (22)
       objectReference: {fileID: 0}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 1563099956}
@@ -10825,6 +10860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water - Red-1 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
@@ -12160,6 +12199,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &1249206387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16871,6 +16911,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &1516075488
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17190,6 +17231,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &1561562100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17320,6 +17362,10 @@ PrefabInstance:
       value: Water - Red-1 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 1563099956}
@@ -17381,6 +17427,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!61 &1584535182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17535,6 +17582,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 0}
 --- !u!212 &1595944952
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18395,6 +18443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446a06fd8690c6049967eee9aee4ce8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sugarCubePrefab: {fileID: 4396537750130036752, guid: cce9075db800ab8439cb0d42ababa631, type: 3}
 --- !u!1 &1723534424
 GameObject:
   m_ObjectHideFlags: 0
@@ -19405,6 +19454,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &1833970853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20039,6 +20089,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 0}
 --- !u!212 &1866945461
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20317,6 +20368,10 @@ PrefabInstance:
       value: Water - Red-1 (18)
       objectReference: {fileID: 0}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 1563099956}
@@ -20430,6 +20485,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 0}
 --- !u!212 &1880534891
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20549,6 +20605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water - Red-1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
@@ -21973,6 +22033,10 @@ PrefabInstance:
       value: Water - Red-1 (24)
       objectReference: {fileID: 0}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 1563099956}
@@ -22480,6 +22544,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &1972786590
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22641,6 +22706,7 @@ MonoBehaviour:
   deathRiseAmount: 0.5
   deathRiseDuration: 0.5
   deathFallDuration: 2
+  cubeManager: {fileID: 400914039}
 --- !u!212 &1982099920
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24864,6 +24930,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fca323197729cf94bbd26eb5a2f2b318, type: 3}
+--- !u!1001 &8650947917330516387
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 69.83902
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9241614
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5344342
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877385263594946085, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915040588643421625, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
+      propertyPath: m_Name
+      value: SugarCubeManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b816400f891d0544946654a5aa64bb6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -24949,3 +25072,4 @@ SceneRoots:
   - {fileID: 1058111544}
   - {fileID: 166731640}
   - {fileID: 1584535183}
+  - {fileID: 8650947917330516387}
