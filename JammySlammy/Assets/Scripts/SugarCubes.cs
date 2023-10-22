@@ -4,17 +4,16 @@ public class SugarCube : MonoBehaviour
 {
     private SugarCubeManager cubeManager;
     private Vector3 originalPosition;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-        // Assign the original position when the cube spawns
         originalPosition = transform.position;
 
-        // Find the CubeManager in the scene
         cubeManager = FindObjectOfType<SugarCubeManager>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,8 +26,10 @@ public class SugarCube : MonoBehaviour
             }
 
             other.GetComponent<Player>().CollectSugarCube();
-            Destroy(gameObject); // Destroy the sugar cube after collection
+
+            spriteRenderer.enabled = false;
+
+            Destroy(gameObject, 3f);
         }
     }
-
 }

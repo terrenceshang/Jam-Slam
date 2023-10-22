@@ -3,9 +3,9 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    public static int sugarCubesCollected = 0; // Current count (now static)
-    public int sugarCubesRequired = 5; // Set this to the required number to open the gate
-    public GateScript gate; // Drag the Gate object with the GateScript here
+    public static int sugarCubesCollected = 0;
+    public int sugarCubesRequired = 5;
+    public GateScript gate;
     public TextMeshProUGUI sugarCubeCounterUI;
 
     private void Update()
