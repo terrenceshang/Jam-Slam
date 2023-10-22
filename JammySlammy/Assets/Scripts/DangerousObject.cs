@@ -6,6 +6,7 @@ public class DangerousObject : MonoBehaviour
     public float deathRiseAmount = 0.5f; // The amount the object will rise before falling
     public float deathRiseDuration = 0.5f; // Duration of the rise
     public float deathFallDuration = 2f; // Duration of the fall
+    public SugarCubeManager cubeManager;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,7 +19,7 @@ public class DangerousObject : MonoBehaviour
                 return; // Exit the loop once a match is found
             }
         }
-        Debug.Log(other.name + " has encountered the dangerous object but is not affected.");
+
     }
 
 
@@ -46,7 +47,7 @@ public class DangerousObject : MonoBehaviour
             obj.transform.position = Vector3.Lerp(initialPos, targetPos, t);
             yield return null;
         }
-
+        cubeManager.RespawnCubes();
         RespawnAllVulnerableObjects();
     }
 

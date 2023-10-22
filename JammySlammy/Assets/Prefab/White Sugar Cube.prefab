@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9006697009089915834}
   - component: {fileID: 4396537750130036752}
   - component: {fileID: 1161396762568803074}
+  - component: {fileID: 5983715976709764809}
   m_Layer: 0
   m_Name: White Sugar Cube
   m_TagString: Untagged
@@ -143,3 +144,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &5983715976709764809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676096933610073062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446a06fd8690c6049967eee9aee4ce8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
