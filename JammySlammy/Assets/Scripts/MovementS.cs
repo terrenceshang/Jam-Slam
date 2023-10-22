@@ -69,7 +69,6 @@ public class MovementS : MonoBehaviour
         }
 
         HandleStepUp();
-        Flip();
         if (Input.GetKeyDown(KeyCode.S) && !IsGrounded() && hasSpecialCube)
         {
             DropSpecialCube();
@@ -87,7 +86,7 @@ public class MovementS : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
         foreach (var collider in colliders)
         {
-            if ((collider.CompareTag("Ground") || collider.CompareTag("Pushable") || (collider.CompareTag("Player")) && collider.gameObject != this.gameObject))
+            if ((collider.CompareTag("Ground") || collider.CompareTag("Pushable") || collider.CompareTag("Scale") || (collider.CompareTag("Player")) && collider.gameObject != this.gameObject))
             {
                 return true;
             }
@@ -104,17 +103,6 @@ public class MovementS : MonoBehaviour
         if (hit && Mathf.Abs(hit.point.y - groundCheck.position.y) <= stepHeight)
         {
             transform.position = new Vector3(transform.position.x, hit.point.y + stepHeight, transform.position.z);
-        }
-    }
-
-    private void Flip()
-    {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
-        {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
         }
     }
 

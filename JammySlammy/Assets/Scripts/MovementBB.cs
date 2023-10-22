@@ -100,7 +100,7 @@ public class MovementBB : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
         foreach (var collider in colliders)
         {
-            if ((collider.CompareTag("Ground") || collider.CompareTag("Pushable") || (collider.CompareTag("Player")) && collider.gameObject != this.gameObject))
+            if ((collider.CompareTag("Ground") || collider.CompareTag("Pushable") || collider.CompareTag("Scale") || (collider.CompareTag("Player")) && collider.gameObject != this.gameObject))
             {
                 return true;
             }
