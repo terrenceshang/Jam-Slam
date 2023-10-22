@@ -10,10 +10,13 @@ public class DangerousObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         foreach (GameObject vulnerableObj in vulnerableObjects)
         {
+
             if (other.gameObject == vulnerableObj)
             {
+
 
                 Die(other.gameObject);
                 return; // Exit the loop once a match is found
@@ -26,6 +29,8 @@ public class DangerousObject : MonoBehaviour
 
     private System.Collections.IEnumerator DeathAnimation(GameObject obj)
     {
+
+
         // Rise up
         float startTime = Time.time;
         Vector3 initialPos = obj.transform.position;
@@ -47,15 +52,16 @@ public class DangerousObject : MonoBehaviour
             obj.transform.position = Vector3.Lerp(initialPos, targetPos, t);
             yield return null;
         }
-
-        RespawnAllVulnerableObjects();
         cubeManager.RespawnCubes();
         Debug.Log("Nå skal respawn være sendt");
+        RespawnAllVulnerableObjects();
+
     }
 
 
     private void Die(GameObject obj)
     {
+
         obj.GetComponent<Collider2D>().enabled = false; // Disable collider to prevent further interactions
         obj.GetComponent<Rigidbody2D>().isKinematic = true; // Set Rigidbody2D to kinematic to control movement
         StartCoroutine(DeathAnimation(obj));
@@ -63,6 +69,7 @@ public class DangerousObject : MonoBehaviour
 
     private void RespawnIndividualObject(GameObject obj)
     {
+
         Vector3 respawnPoint = Vector3.zero;
 
         MovementS strawberry = obj.GetComponent<MovementS>();

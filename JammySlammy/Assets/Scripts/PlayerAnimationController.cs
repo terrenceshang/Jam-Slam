@@ -44,27 +44,29 @@ public class PlayerAnimationController : MonoBehaviour
 
         if (Mathf.Abs(verticalChange) < 0.00001 && horizontalChange < -0.0001)
         {
-            Debug.Log("Playing Move Left Animation");
+
             spriteRenderer.sprite = moveLeftSprites[currentFrameIndex % moveLeftSprites.Count];
         }
         else if (Mathf.Abs(verticalChange) < 0.00001 && horizontalChange > 0.0001)
         {
-            Debug.Log("Playing Move Right Animation");
+
             spriteRenderer.sprite = moveRightSprites[currentFrameIndex % moveRightSprites.Count];
         }
         else if (Mathf.Abs(verticalChange) > 0.00001)
         {
-            if (horizontalChange > 0.0001) {
+            if (horizontalChange > 0.0001)
+            {
                 spriteRenderer.sprite = jumpRightSprites[currentFrameIndex % jumpRightSprites.Count];
             }
-            if (horizontalChange < -0.0001) {
-                spriteRenderer.sprite= jumpLeftSprites[currentFrameIndex % jumpLeftSprites.Count];
+            if (horizontalChange < -0.0001)
+            {
+                spriteRenderer.sprite = jumpLeftSprites[currentFrameIndex % jumpLeftSprites.Count];
             }
-            Debug.Log("Playing Jump Animation");
+
         }
         else
         {
-            Debug.Log("Playing Idle Animation");
+
             spriteRenderer.sprite = idleSprites[currentFrameIndex % idleSprites.Count];
         }
     }

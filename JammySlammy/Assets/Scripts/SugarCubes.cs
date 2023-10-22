@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SugarCube : MonoBehaviour
 {
-    private SugarCubeManager cubeManager;
+    public SugarCubeManager cubeManager;
     private Vector3 originalPosition;
     private SpriteRenderer spriteRenderer;
 
@@ -13,23 +13,21 @@ public class SugarCube : MonoBehaviour
         cubeManager = FindObjectOfType<SugarCubeManager>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SugarCubeManager manager = FindObjectOfType<SugarCubeManager>();
-            if (manager != null)
-            {
-                manager.RegisterPickedUpCube(this, transform.position);
-            }
+
+            cubeManager.RegisterPickedUpCube(this, transform.position);
+
 
             other.GetComponent<Player>().CollectSugarCube();
-
-            spriteRenderer.enabled = false;
-
-            Destroy(gameObject, 3f);
+            Debug.Log("Deactivating SugarCube"); // ADD THIS
+            gameObject.SetActive(false); // Deactivate the sugar cube after collection
         }
     }
 }

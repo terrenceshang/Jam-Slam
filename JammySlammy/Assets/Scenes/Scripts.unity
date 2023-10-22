@@ -152,7 +152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 45d86fd84ac860644a5169eb37014396, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9147,6 +9147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e1c72b7de5e894ebd27b185c63e120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubeManager: {fileID: 0}
 --- !u!212 &1510265780
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10731,6 +10732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e1c72b7de5e894ebd27b185c63e120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubeManager: {fileID: 0}
 --- !u!212 &1681427337
 SpriteRenderer:
   m_ObjectHideFlags: 0
