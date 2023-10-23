@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class DangerousObject : MonoBehaviour
 {
-
     public GameObject[] vulnerableObjects; // Array of objects that are vulnerable. Assign these in the inspector.
     public float deathRiseAmount = 0.5f; // The amount the object will rise before falling
     public float deathRiseDuration = 0.5f; // Duration of the rise
@@ -14,6 +13,8 @@ public class DangerousObject : MonoBehaviour
     public SuperCube superCubePrefab;
 
     private SuperCube newSuperCube;
+
+    public Vector3 pos = Vector3.zero;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -68,7 +69,10 @@ public class DangerousObject : MonoBehaviour
             pushable.ResetToOriginalPosition();
         }
         RespawnAllVulnerableObjects();
-        SuperCube spawnedCube = Instantiate(superCubePrefab, new Vector3(75, 10, 0), Quaternion.identity);
+
+
+
+        SuperCube spawnedCube = Instantiate(superCubePrefab, pos, Quaternion.identity);
         newSuperCube = spawnedCube;
 
     }
@@ -167,4 +171,14 @@ public class DangerousObject : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+
+
+        foreach (SuperCube superCube in FindObjectsOfType<SuperCube>())
+        {
+
+            pos = superCube.transform.position;
+        }
+    }
 }

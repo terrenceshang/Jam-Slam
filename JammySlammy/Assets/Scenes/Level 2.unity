@@ -1124,6 +1124,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 400914039}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 0}
@@ -1161,6 +1165,10 @@ PrefabInstance:
       propertyPath: cubeManager
       value: 
       objectReference: {fileID: 400914039}
+    - target: {fileID: 1649902294059963413, guid: ad24ff80fcd00674ebfa49449a007f89, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
     - target: {fileID: 1649902294059963413, guid: ad24ff80fcd00674ebfa49449a007f89, type: 3}
       propertyPath: superCubeManager
       value: 
@@ -1465,6 +1473,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &196535368
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1582,6 +1592,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &196951707
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2587,6 +2599,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 400914039}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 0}
@@ -2831,6 +2847,10 @@ PrefabInstance:
       propertyPath: cubeManager
       value: 
       objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
@@ -4847,6 +4867,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &707187630
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5268,6 +5290,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 400914039}
     - target: {fileID: 1649902294059963413, guid: ad24ff80fcd00674ebfa49449a007f89, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+    - target: {fileID: 1649902294059963413, guid: ad24ff80fcd00674ebfa49449a007f89, type: 3}
       propertyPath: superCubeManager
       value: 
       objectReference: {fileID: 102087417}
@@ -5568,6 +5594,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &826703602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7347,7 +7375,7 @@ Transform:
   m_GameObject: {fileID: 1052577362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 78.700005, y: 2.4, z: 0}
+  m_LocalPosition: {x: 78.65001, y: 2.4500003, z: 0}
   m_LocalScale: {x: 25, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7369,6 +7397,10 @@ PrefabInstance:
       propertyPath: cubeManager
       value: 
       objectReference: {fileID: 400914039}
+    - target: {fileID: 1649902294059963413, guid: ad24ff80fcd00674ebfa49449a007f89, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
     - target: {fileID: 1649902294059963413, guid: ad24ff80fcd00674ebfa49449a007f89, type: 3}
       propertyPath: superCubeManager
       value: 
@@ -7591,6 +7623,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 400914039}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 0}
@@ -7749,6 +7785,10 @@ PrefabInstance:
       propertyPath: cubeManager
       value: 
       objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
@@ -8899,6 +8939,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 102087417}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &1249206387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11409,6 +11451,10 @@ PrefabInstance:
       value: Water - Red-1 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 0}
@@ -12822,7 +12868,7 @@ Transform:
   m_GameObject: {fileID: 1509858728}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.607307, y: 1.4642439, z: 0}
+  m_LocalPosition: {x: 10.757309, y: 1.3142443, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13133,6 +13179,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &1516075488
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13413,6 +13461,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &1561562100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13541,6 +13591,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 400914039}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 0}
@@ -13600,6 +13654,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!61 &1584535182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14931,11 +14987,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917273674234955517, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 52.8
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 3917273674234955517, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.3
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 3917273674234955517, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15663,6 +15719,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &1833970853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16265,6 +16323,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 400914039}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 0}
@@ -16346,6 +16408,10 @@ PrefabInstance:
       propertyPath: cubeManager
       value: 
       objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
@@ -17762,6 +17828,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 400914039}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
       objectReference: {fileID: 0}
@@ -18025,7 +18095,7 @@ Transform:
   m_GameObject: {fileID: 1950979432}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.607307, y: 1.4642439, z: 0}
+  m_LocalPosition: {x: 9.757309, y: 1.3142443, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18091,6 +18161,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &1972786590
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18208,6 +18280,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &1982099920
 SpriteRenderer:
   m_ObjectHideFlags: 0

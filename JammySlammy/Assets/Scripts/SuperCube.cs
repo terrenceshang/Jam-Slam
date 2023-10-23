@@ -12,9 +12,10 @@ public class SuperCube : MonoBehaviour
     {
         if (pickupCooldown <= 0f && other.CompareTag("Player"))
         {
-            cubeManager.RegisterPickedUpCube(this, transform.position);
+            
             AssignCubeToBerry(other);
             StartCoroutine(DeactivateAfterDelay(0.1f)); // Start the coroutine to delay deactivation
+            Destroy(gameObject);
         }
         if (other.CompareTag("Ground"))
         {

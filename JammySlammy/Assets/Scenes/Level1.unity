@@ -2329,6 +2329,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 2054325493}
   superCubeManager: {fileID: 835067741}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!70 &315589039
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5191,12 +5193,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vulnerableObjects:
-  - {fileID: 0}
+  - {fileID: 463846633}
   deathRiseAmount: 1
   deathRiseDuration: 0.5
   deathFallDuration: 2
-  cubeManager: {fileID: 0}
+  cubeManager: {fileID: 2054325493}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &688865163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6050,11 +6054,15 @@ PrefabInstance:
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: cubeManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2054325493}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: deathRiseAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
@@ -6066,7 +6074,7 @@ PrefabInstance:
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 463846633}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9131,6 +9139,8 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 2054325493}
   superCubeManager: {fileID: 835067741}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!114 &959189937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13150,11 +13160,15 @@ PrefabInstance:
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: cubeManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2054325493}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: deathRiseAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
@@ -13166,7 +13180,7 @@ PrefabInstance:
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 463846633}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21717,11 +21731,15 @@ PrefabInstance:
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: cubeManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2054325493}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: deathRiseAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
@@ -21733,7 +21751,7 @@ PrefabInstance:
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 463846633}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23029,11 +23047,15 @@ PrefabInstance:
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: cubeManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2054325493}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: deathRiseAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubePrefab
+      value: 
+      objectReference: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableBerry
       value: 
@@ -23045,7 +23067,7 @@ PrefabInstance:
     - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
       propertyPath: vulnerableObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 463846633}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
