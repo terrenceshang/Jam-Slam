@@ -133,6 +133,10 @@ public class MovementS : MonoBehaviour
         hasSpecialCube = false; // Set this to false after dropping the cube.
     }
 
+    public void setSpecialCubeFalse()
+    {
+        hasSpecialCube = false;
+    }
     public void OnTriggerStay2D(Collider2D other)
     {
 

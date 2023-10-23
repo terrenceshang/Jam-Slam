@@ -16,7 +16,7 @@ public class SugarCubeManager : MonoBehaviour
 
     public void RegisterPickedUpCube(SugarCube cube, Vector3 originalPosition)
     {
-        Debug.Log("REGISTRERT PLUKKET OPP");
+
         if (!deactivatedCubes.Contains(cube))
         {
             deactivatedCubes.Add(cube);
@@ -26,11 +26,11 @@ public class SugarCubeManager : MonoBehaviour
 
     public void RespawnCubes()
     {
-        Debug.Log("Number of cubes to respawn: " + deactivatedCubes.Count);
+
 
         foreach (SugarCube cube in deactivatedCubes)
         {
-            Debug.Log("Deaktiverr nå");
+
             cube.gameObject.SetActive(true); // Reactivate the sugar cube
         }
 

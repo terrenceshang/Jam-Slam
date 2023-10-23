@@ -89,6 +89,10 @@ public class MovementBB : MonoBehaviour
         }
     }
 
+    public void setSpecialCubeFalse()
+    {
+        hasSpecialCube = false;
+    }
     private void FixedUpdate()
     {
         float currentSpeed = isInWater ? speed * waterSpeedModifier : speed;

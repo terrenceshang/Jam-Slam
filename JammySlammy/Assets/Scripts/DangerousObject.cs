@@ -8,6 +8,8 @@ public class DangerousObject : MonoBehaviour
     public float deathFallDuration = 2f; // Duration of the fall
     public SugarCubeManager cubeManager;
 
+    public SuperCubeManager superCubeManager;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -53,7 +55,12 @@ public class DangerousObject : MonoBehaviour
             yield return null;
         }
         cubeManager.RespawnCubes();
+        superCubeManager.RespawnCubes();
         Debug.Log("Nå skal respawn være sendt");
+        foreach (Pushable pushable in FindObjectsOfType<Pushable>())
+        {
+            pushable.ResetToOriginalPosition();
+        }
         RespawnAllVulnerableObjects();
 
     }
@@ -61,6 +68,7 @@ public class DangerousObject : MonoBehaviour
 
     private void Die(GameObject obj)
     {
+
 
         obj.GetComponent<Collider2D>().enabled = false; // Disable collider to prevent further interactions
         obj.GetComponent<Rigidbody2D>().isKinematic = true; // Set Rigidbody2D to kinematic to control movement
@@ -77,13 +85,19 @@ public class DangerousObject : MonoBehaviour
 
 
 
+
+
+
+
         if (strawberry != null)
         {
+            strawberry.setSpecialCubeFalse();
             strawberry.ResetPlayerState();
         }
 
         if (blueberry != null)
         {
+            blueberry.setSpecialCubeFalse();
             blueberry.ResetPlayerState();
         }
 

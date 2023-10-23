@@ -10,7 +10,7 @@ public class SugarCube : MonoBehaviour
     {
         originalPosition = transform.position;
 
-        cubeManager = FindObjectOfType<SugarCubeManager>();
+
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -26,7 +26,7 @@ public class SugarCube : MonoBehaviour
 
 
             other.GetComponent<Player>().CollectSugarCube();
-            Debug.Log("Deactivating SugarCube"); // ADD THIS
+
             gameObject.SetActive(false); // Deactivate the sugar cube after collection
         }
     }

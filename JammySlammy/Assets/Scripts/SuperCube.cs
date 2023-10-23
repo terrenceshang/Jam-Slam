@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SuperCube : MonoBehaviour
 {
-
+    public SuperCubeManager cubeManager;
     private float pickupCooldown = 0f; // Time until the cube can be picked up again
     private const float CooldownDuration = 0.5f; // The duration of the cooldown
     // Start is called before the first frame update
@@ -12,8 +12,9 @@ public class SuperCube : MonoBehaviour
     {
         if (pickupCooldown <= 0f && other.CompareTag("Player"))
         {
+            cubeManager.RegisterPickedUpCube(this, transform.position);
             AssignCubeToBerry(other);
-            Destroy(gameObject); // Destroy the special cube after being picked up
+            gameObject.SetActive(false);
         }
         if (other.CompareTag("Ground"))
         {
