@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CauldronAnimation : MonoBehaviour
+public class StaticAnimation : MonoBehaviour
 {
     public Sprite[] cauldronFrames; // Drag your 4 images here in the order you want them to appear
     public float frameDuration = 0.25f; // The duration each frame is shown

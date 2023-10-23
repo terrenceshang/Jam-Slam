@@ -7,14 +7,14 @@ public class SuperCube : MonoBehaviour
     public SuperCubeManager cubeManager;
     private float pickupCooldown = 0f; // Time until the cube can be picked up again
     private const float CooldownDuration = 0.5f; // The duration of the cooldown
-    // Start is called before the first frame update
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (pickupCooldown <= 0f && other.CompareTag("Player"))
         {
             cubeManager.RegisterPickedUpCube(this, transform.position);
             AssignCubeToBerry(other);
-            gameObject.SetActive(false);
+            StartCoroutine(DeactivateAfterDelay(0.1f)); // Start the coroutine to delay deactivation
         }
         if (other.CompareTag("Ground"))
         {
@@ -35,6 +35,7 @@ public class SuperCube : MonoBehaviour
             pickupCooldown -= Time.deltaTime;
         }
     }
+
     private void AssignCubeToBerry(Collider2D berry)
     {
         MovementS strawberryMovement = berry.GetComponent<MovementS>();
@@ -44,13 +45,11 @@ public class SuperCube : MonoBehaviour
         {
             Debug.Log("Strawberry picked up the special cube!");
             strawberryMovement.hasSpecialCube = true; // Assign the special cube to strawberry
-                                                      // Any additional logic you want when the strawberry picks it up
         }
         else if (blueberryMovement != null && !blueberryMovement.hasSpecialCube)
         {
             Debug.Log("Blueberry picked up the special cube!");
             blueberryMovement.hasSpecialCube = true; // Assign the special cube to blueberry
-                                                     // Any additional logic you want when the blueberry picks it up
         }
     }
 
@@ -59,6 +58,9 @@ public class SuperCube : MonoBehaviour
         pickupCooldown = CooldownDuration;
     }
 
-
-
+    IEnumerator DeactivateAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        gameObject.SetActive(false);
+    }
 }

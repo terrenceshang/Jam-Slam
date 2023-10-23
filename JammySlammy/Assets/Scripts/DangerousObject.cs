@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DangerousObject : MonoBehaviour
 {
+
     public GameObject[] vulnerableObjects; // Array of objects that are vulnerable. Assign these in the inspector.
     public float deathRiseAmount = 0.5f; // The amount the object will rise before falling
     public float deathRiseDuration = 0.5f; // Duration of the rise
