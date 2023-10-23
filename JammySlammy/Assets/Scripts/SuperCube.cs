@@ -8,13 +8,16 @@ public class SuperCube : MonoBehaviour
     private float pickupCooldown = 0f; // Time until the cube can be picked up again
     private const float CooldownDuration = 0.5f; // The duration of the cooldown
     // Start is called before the first frame update
+
+    private Vector2 originalPosition;
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (pickupCooldown <= 0f && other.CompareTag("Player"))
         {
-            cubeManager.RegisterPickedUpCube(this, transform.position);
             AssignCubeToBerry(other);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
         if (other.CompareTag("Ground"))
         {
@@ -27,6 +30,7 @@ public class SuperCube : MonoBehaviour
             }
         }
     }
+
 
     void Update()
     {
