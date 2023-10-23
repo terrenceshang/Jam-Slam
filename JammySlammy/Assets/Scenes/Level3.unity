@@ -3310,6 +3310,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &243487620
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3982,6 +3983,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &271175267
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6678,6 +6680,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &392195235
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13922,6 +13925,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 0}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &688865163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16669,6 +16673,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 0}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: 0}
 --- !u!114 &809109883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18627,6 +18632,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &883130343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22304,6 +22310,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1038987576
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22607,7 +22614,7 @@ Transform:
   m_GameObject: {fileID: 1052577362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.74999, y: 7.25, z: 0}
+  m_LocalPosition: {x: 89.74999, y: -44.25, z: 0}
   m_LocalScale: {x: 41.166737, y: 19.959953, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22623,11 +22630,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161292279981768901, guid: b8e70a60379fa6244b885c4e1b62cb2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 161292279981768901, guid: b8e70a60379fa6244b885c4e1b62cb2c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.75
+      value: 11.25
       objectReference: {fileID: 0}
     - target: {fileID: 161292279981768901, guid: b8e70a60379fa6244b885c4e1b62cb2c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23512,6 +23519,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1098052582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24667,6 +24675,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1203927913
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25006,6 +25015,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1209787548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25802,6 +25812,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1253412278
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26707,6 +26718,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1324759669
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27805,6 +27817,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1373160168
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33550,6 +33563,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1583944273
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33655,6 +33669,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!61 &1584535182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34716,6 +34731,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1654368225
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35055,6 +35071,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1669593251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36414,11 +36431,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917273674234955517, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 74.25
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3917273674234955517, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.75
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3917273674234955517, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38545,6 +38562,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 0}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1866945461
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39023,6 +39041,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 0}
   superCubeManager: {fileID: 0}
+  superCubePrefab: {fileID: 0}
 --- !u!212 &1880534891
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41712,11 +41731,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1489970553036249299, guid: 3eb3dd7c260c5b74c88350b48200fbc0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.5
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 1489970553036249299, guid: 3eb3dd7c260c5b74c88350b48200fbc0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.75
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1489970553036249299, guid: 3eb3dd7c260c5b74c88350b48200fbc0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -44448,6 +44467,7 @@ MonoBehaviour:
   deathFallDuration: 2
   cubeManager: {fileID: 400914039}
   superCubeManager: {fileID: 36778547}
+  superCubePrefab: {fileID: -1252977109211182567, guid: ad38bd1a307589742b4357663208dfa3, type: 3}
 --- !u!212 &2072369880
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45336,6 +45356,120 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2138066238
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 514179723011110262, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547026337156586283, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3596290107281863428, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776598521269659202, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: m_Name
+      value: Water - Red-1 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: cubeManager
+      value: 
+      objectReference: {fileID: 400914039}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: deathRiseAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: vulnerableBerry
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: superCubeManager
+      value: 
+      objectReference: {fileID: 36778547}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: vulnerableObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953661195851699092, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      propertyPath: vulnerableObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1792951637}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3776598521269659202, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2138066240}
+  m_SourcePrefab: {fileID: 100100000, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+--- !u!1 &2138066239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3776598521269659202, guid: 61e6b3b84614abb40913c5fc22431ff5, type: 3}
+  m_PrefabInstance: {fileID: 2138066238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2138066240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138066239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b45c2ea0abc1c4ab746e8fe9d97aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cauldronFrames:
+  - {fileID: 21300000, guid: 7927a95a39cbc184ebc015e91d755872, type: 3}
+  - {fileID: 21300000, guid: 01667d4d9c33a8b4cb0a34ed6c3cab09, type: 3}
+  - {fileID: 21300000, guid: 0a167770f0c49754292fd3e96e15fcb4, type: 3}
+  frameDuration: 0.25
 --- !u!1001 &3887520003035505867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46030,6 +46164,7 @@ SceneRoots:
   - {fileID: 575459207}
   - {fileID: 1654368226}
   - {fileID: 805591789}
+  - {fileID: 2138066238}
   - {fileID: 1209787549}
   - {fileID: 1193901916}
   - {fileID: 1669593252}

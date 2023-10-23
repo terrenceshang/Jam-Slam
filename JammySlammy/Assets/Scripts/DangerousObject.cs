@@ -11,6 +11,10 @@ public class DangerousObject : MonoBehaviour
 
     public SuperCubeManager superCubeManager;
 
+    public SuperCube superCubePrefab;
+
+    private SuperCube newSuperCube;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -56,13 +60,16 @@ public class DangerousObject : MonoBehaviour
             yield return null;
         }
         cubeManager.RespawnCubes();
-        superCubeManager.RespawnCubes();
+        // superCubeManager.RespawnCubes();
+
         Debug.Log("Nå skal respawn være sendt");
         foreach (Pushable pushable in FindObjectsOfType<Pushable>())
         {
             pushable.ResetToOriginalPosition();
         }
         RespawnAllVulnerableObjects();
+        SuperCube spawnedCube = Instantiate(superCubePrefab, new Vector3(75, 10, 0), Quaternion.identity);
+        newSuperCube = spawnedCube;
 
     }
 

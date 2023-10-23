@@ -8,6 +8,10 @@ public class SuperCubeManager : MonoBehaviour
 
 
 
+    public void Start()
+    {
+
+    }
     public List<SuperCube> deactivatedCubes = new List<SuperCube>();
 
     public void RegisterPickedUpCube(SuperCube cube, Vector3 originalPosition)
